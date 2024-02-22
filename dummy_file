@@ -1,0 +1,23 @@
+={while {predicate block} {
+	if{predicate{}
+		while{predicate block}
+	}
+}}
+
+while {{=={k 10}} {
+	puts{"AAAAAH"}
+}}
+
+={for {init predicate end block} {
+	init{}
+	if{predicate{} {
+		while{predicate {
+			block{}
+			end{}
+		}}
+	}}
+}}
+
+for{{={i 0}} {<{i 10}} {++{i}} {
+	puts{i}
+}}
